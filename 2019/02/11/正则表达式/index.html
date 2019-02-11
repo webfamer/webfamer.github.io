@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://images.91miandan.top/index/20190123/IbNuufHb2xPu.jpg?imageslim">
 <meta property="og:image" content="http://images.91miandan.top/index/20190123/xeOPxYXy6HmU.jpg?imageslim">
 <meta property="og:image" content="http://images.91miandan.top/index/20190123/brjBRdeAdnEX.jpg?imageslim">
-<meta property="og:updated_time" content="2019-02-11T02:05:12.025Z">
+<meta property="og:updated_time" content="2019-02-11T02:17:22.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="正则表达式知识点">
@@ -275,6 +275,13 @@
             
           </span>
           
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2019-02-11T10:17:22+08:00" content="2019-02-11">
+                2019-02-11
+              </time>
+            </span>
+          
 
           
 
@@ -305,9 +312,8 @@
 
       
         <p>正则表达式知识点<br><a id="more"></a><br>正则：也叫规则，让计算机能够读懂人类的规则<br>正则都是操作字符串的<br>写法：<br>var re = /a/  简写<br>var re = new RegExp(‘a’);  全称写法</p>
-<p>##正则表达式的常用方法  </p>
-<p>###1. test()<br><strong>test:</strong> 正则去匹配字符串，如果匹配成功则返回真，如果匹配失败则返回假<br><strong>test的写法：</strong> 正则.test(字符串)<br><strong>转义字符：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">\s 空格  \S 非空格  </span><br><span class="line"></span><br><span class="line">\d 数字 \D 非数字  </span><br><span class="line"></span><br><span class="line">\w 字符 （字母 数字 下划线_） \W 非字符  </span><br><span class="line"></span><br><span class="line">.  代表任意字符   \.  真正的点     <span class="keyword">var</span> re =<span class="regexp">/a.b/</span>  </span><br><span class="line"></span><br><span class="line">\b 独立的部分 （起始，结束，空格）</span><br><span class="line"></span><br><span class="line">理解独立的部分：  </span><br><span class="line"><span class="keyword">var</span> str =<span class="string">'onetwo'</span>    </span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/one\b/</span>;  </span><br><span class="line">alert(re.test(str))    <span class="comment">//结果为false，因为one后面是字母t，既不是起始部分也不是结束部分，所以返回false**  </span></span><br><span class="line">\B 非独立的部分  </span><br><span class="line"></span><br><span class="line">\<span class="number">1</span> 重复的第一个子项  </span><br><span class="line"></span><br><span class="line">\<span class="number">2</span> 重复的第二个子项  </span><br><span class="line"></span><br><span class="line">###重复的子项区别：</span><br><span class="line"><span class="keyword">var</span> re= <span class="regexp">/\w\w/</span>  可以匹配到：c9</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/(\w)\1/</span> ; cc <span class="number">99</span></span><br><span class="line"></span><br><span class="line">###重复的子项应用：</span><br><span class="line">&lt;p&gt;&lt;/p&gt;  子项表示 \<span class="comment">//1</span></span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">例子：找出字符串里出现次数最多的字符</span><br><span class="line"><span class="keyword">var</span> s = <span class="string">'asssssjdfhsjssseew'</span></span><br><span class="line"><span class="keyword">var</span> arr = s.split(<span class="string">''</span>);</span><br><span class="line">str = arr.sort().join(<span class="string">''</span>) <span class="comment">//对字符串进行排序，这样处理后字符相同的就会排在一起</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> value = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/(\w)\1+/g</span>  同一字符子项出现多次</span><br><span class="line">str.replace(re,<span class="function"><span class="keyword">function</span>(<span class="params">$<span class="number">0</span>,$<span class="number">1</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index&lt;$<span class="number">0.</span>length)&#123;</span><br><span class="line">        index = $<span class="number">0.</span>length;</span><br><span class="line">        value = $<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"次数出现最多的字符是"</span>+value+<span class="string">",出现了"</span>+index+<span class="string">"次"</span>)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>###2. search()<br><strong>search:</strong> 正则去匹配字符串，如果匹配成功则返回匹配成功的位置，如果匹配失败返回-1<br><strong>search的写法：</strong> 字符串.search(正则)    </p>
+<h2 id="正则表达式的常用方法"><a href="#正则表达式的常用方法" class="headerlink" title="正则表达式的常用方法"></a>正则表达式的常用方法</h2><h3 id="1-test"><a href="#1-test" class="headerlink" title="1. test()"></a>1. test()</h3><p><strong>test:</strong> 正则去匹配字符串，如果匹配成功则返回真，如果匹配失败则返回假<br><strong>test的写法：</strong> 正则.test(字符串)<br><strong>转义字符：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">\s 空格  \S 非空格  </span><br><span class="line"></span><br><span class="line">\d 数字 \D 非数字  </span><br><span class="line"></span><br><span class="line">\w 字符 （字母 数字 下划线_） \W 非字符  </span><br><span class="line"></span><br><span class="line">.  代表任意字符   \.  真正的点     <span class="keyword">var</span> re =<span class="regexp">/a.b/</span>  </span><br><span class="line"></span><br><span class="line">\b 独立的部分 （起始，结束，空格）</span><br><span class="line"></span><br><span class="line">理解独立的部分：  </span><br><span class="line"><span class="keyword">var</span> str =<span class="string">'onetwo'</span>    </span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/one\b/</span>;  </span><br><span class="line">alert(re.test(str))    <span class="comment">//结果为false，因为one后面是字母t，既不是起始部分也不是结束部分，所以返回false**  </span></span><br><span class="line">\B 非独立的部分  </span><br><span class="line"></span><br><span class="line">\<span class="number">1</span> 重复的第一个子项  </span><br><span class="line"></span><br><span class="line">\<span class="number">2</span> 重复的第二个子项  </span><br><span class="line"></span><br><span class="line">### 重复的子项区别：</span><br><span class="line"><span class="keyword">var</span> re= <span class="regexp">/\w\w/</span>  可以匹配到：c9</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/(\w)\1/</span> ; cc <span class="number">99</span></span><br><span class="line"></span><br><span class="line">### 重复的子项应用：</span><br><span class="line">&lt;p&gt;&lt;/p&gt;  子项表示 \<span class="comment">//1</span></span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">例子：找出字符串里出现次数最多的字符</span><br><span class="line"><span class="keyword">var</span> s = <span class="string">'asssssjdfhsjssseew'</span></span><br><span class="line"><span class="keyword">var</span> arr = s.split(<span class="string">''</span>);</span><br><span class="line">str = arr.sort().join(<span class="string">''</span>) <span class="comment">//对字符串进行排序，这样处理后字符相同的就会排在一起</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> value = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/(\w)\1+/g</span>  同一字符子项出现多次</span><br><span class="line">str.replace(re,<span class="function"><span class="keyword">function</span>(<span class="params">$<span class="number">0</span>,$<span class="number">1</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index&lt;$<span class="number">0.</span>length)&#123;</span><br><span class="line">        index = $<span class="number">0.</span>length;</span><br><span class="line">        value = $<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"次数出现最多的字符是"</span>+value+<span class="string">",出现了"</span>+index+<span class="string">"次"</span>)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-search"><a href="#2-search" class="headerlink" title="2. search()"></a>2. search()</h3><p><strong>search:</strong> 正则去匹配字符串，如果匹配成功则返回匹配成功的位置，如果匹配失败返回-1<br><strong>search的写法：</strong> 字符串.search(正则)    </p>
 <blockquote>
 <p>正则中的默认是区分大小写的,如果不区分大小写，在正则最后加上标识符 i  </p>
 </blockquote>
@@ -421,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -464,6 +479,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式的常用方法"><span class="nav-number">1.</span> <span class="nav-text">正则表达式的常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-test"><span class="nav-number">1.1.</span> <span class="nav-text">1. test()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-search"><span class="nav-number">1.2.</span> <span class="nav-text">2. search()</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
