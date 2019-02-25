@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="JS基础知识点总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS基础回顾">
+<meta property="og:url" content="http://yoursite.com/2019/02/11/js基础复习/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="JS基础知识点总结">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://images.91miandan.top/index/20190130/cBAauEdDM4VI.png?imageslim">
+<meta property="og:image" content="http://images.91miandan.top/index/20190130/Wi8ILmAUIkYs.png?imageslim">
+<meta property="og:image" content="http://images.91miandan.top/index/20190131/0eegoYROHlDm.gif">
+<meta property="og:updated_time" content="2019-02-23T11:08:56.722Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS基础回顾">
+<meta name="twitter:description" content="JS基础知识点总结">
+<meta name="twitter:image" content="http://images.91miandan.top/index/20190130/cBAauEdDM4VI.png?imageslim">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/11/js基础复习/">
+
+
+
+
+
+  <title>JS基础回顾 | 学习笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学习笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/js基础复习/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="webfamer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JS基础回顾</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T09:25:44+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2019-02-23T19:08:56+08:00" content="2019-02-23">
+                2019-02-23
+              </time>
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>JS基础知识点总结</p>
+<a id="more"></a> 
+<p>=====</p>
+<ol>
+<li>事件：鼠标事件、键盘事件、表单事件、系统事件、自定义事件….</li>
+<li>onload 加载完以后执行…,例如 window.onload,img.onload,body.onload</li>
+<li>function(){} 匿名函数</li>
+<li>所有相对路径都别拿来做判断 例如 img src href =”1.css”   </li>
+<li>颜色值不要拿来做判断color : red #f00 rgb(250,0,0)<br>innerHTML值不要拿来做判断</li>
+<li>JS中允许把 “.”换成”[]” ,”[]”中放会改变的属性值</li>
+<li>document.getElementById(“”)  静态方法<br>document.getELementsByTagName(“”) 动态方法(一旦页面加了元素就能获取到)  类似于数组，有数组的特性<br>不一定要跟document，可以跟其他，例如 其他元素的id<br>添加用 +=  赋值用=<br>在用innerHTML添加大量元素的时候，不要直接和页面发生关系，可以先把元素赋值给一个变量，再把变量加到页面上</li>
+</ol>
+<h3 id="for循环小练习"><a href="#for循环小练习" class="headerlink" title="for循环小练习"></a>for循环小练习</h3><ol>
+<li>每10个换行<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;little practice&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;style&gt;</span></span><br><span class="line"><span class="regexp">    div&#123;</span></span><br><span class="line"><span class="regexp">    width:40px;</span></span><br><span class="line"><span class="regexp">    height: 40px;</span></span><br><span class="line"><span class="regexp">    background: red;</span></span><br><span class="line"><span class="regexp">    text-align: center;</span></span><br><span class="line"><span class="regexp">    color: #fff;</span></span><br><span class="line"><span class="regexp">    font: 16px/</span><span class="number">40</span>px bold micorsoft yahei;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: <span class="number">0</span>px;</span><br><span class="line">    top: <span class="number">0</span>px;</span><br><span class="line">    &#125;   </span><br><span class="line">    &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;script&gt;    </span><br><span class="line">        <span class="keyword">var</span> abox = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"div"</span>);</span><br><span class="line">        <span class="keyword">var</span> cuntTop = <span class="number">0</span>,cuntLeft =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">22</span>;i++)&#123;</span><br><span class="line">            <span class="built_in">document</span>.body.innerHTML += <span class="string">"&lt;div&gt;"</span>+i+<span class="string">"&lt;/div&gt;"</span></span><br><span class="line">        &#125;   </span><br><span class="line">        <span class="keyword">var</span> cuntLeft = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">var</span> cuntTop = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;abox.length;i++)&#123;</span><br><span class="line">             cuntLeft = i%<span class="number">10</span>; <span class="comment">//取模10之后，输出的数字就一直是1-9</span></span><br><span class="line">             cuntTop = <span class="built_in">Math</span>.floor(i/<span class="number">10</span>); <span class="comment">//除10取整之后，每10个的结果变一次，例如10个每个的结果是0，之后10个每个结果是1</span></span><br><span class="line">            abox[i].style.left = cuntLeft*<span class="number">70</span> +<span class="string">'px'</span>;</span><br><span class="line">            abox[i].style.top =cuntTop*<span class="number">70</span> +<span class="string">'px'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="http://images.91miandan.top/index/20190130/cBAauEdDM4VI.png?imageslim" alt="mark"></p>
+<ol start="2">
+<li>打印V字<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;little practice&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;style&gt;</span></span><br><span class="line"><span class="regexp">    div&#123;</span></span><br><span class="line"><span class="regexp">    width:40px;</span></span><br><span class="line"><span class="regexp">    height: 40px;</span></span><br><span class="line"><span class="regexp">    background: red;</span></span><br><span class="line"><span class="regexp">    text-align: center;</span></span><br><span class="line"><span class="regexp">    color: #fff;</span></span><br><span class="line"><span class="regexp">    font: 16px/</span><span class="number">40</span>px bold micorsoft yahei;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: <span class="number">0</span>px;</span><br><span class="line">    top: <span class="number">0</span>px;</span><br><span class="line">    &#125;   </span><br><span class="line">    &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;script&gt;    </span><br><span class="line">        <span class="keyword">var</span> abox = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"div"</span>);</span><br><span class="line">        <span class="keyword">var</span> cuntTop = <span class="number">0</span>,cuntLeft =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">13</span>;i++)&#123;  <span class="comment">//利用for循环顺序输出div到页面</span></span><br><span class="line">            <span class="built_in">document</span>.body.innerHTML += <span class="string">"&lt;div&gt;"</span>+i+<span class="string">"&lt;/div&gt;"</span></span><br><span class="line">        &#125;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="built_in">Math</span>.floor(abox.length/<span class="number">2</span>);i&gt;<span class="number">-1</span>;i--)&#123;  <span class="comment">//前半段正常打印</span></span><br><span class="line">            abox[i].style.left = i*<span class="number">40</span>+<span class="string">"px"</span>;</span><br><span class="line">            abox[i].style.top = i*<span class="number">40</span>+<span class="string">"px"</span>;</span><br><span class="line">     &#125;</span><br><span class="line">        <span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(abox.length/<span class="number">2</span>);</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="built_in">Math</span>.floor(abox.length/<span class="number">2</span>);i&lt;abox.length;i++)&#123;<span class="comment">//后半段top值递减</span></span><br><span class="line">            abox[i].style.left = i*<span class="number">40</span>+<span class="string">"px"</span>;</span><br><span class="line">            abox[i].style.top = num*<span class="number">40</span>+<span class="string">"px"</span>;</span><br><span class="line">            num--;</span><br><span class="line">     &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="http://images.91miandan.top/index/20190130/Wi8ILmAUIkYs.png?imageslim" alt="mark"><br>改变样式的方法：<br>div.style.width = ‘200px’<br>oDiv.style.cssText = “width:200px;height:200px;” //cssText的用法<br>//原理都是给div加上行内式的css, 权重高，覆盖了原来的样式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;input type =<span class="string">"button"</span> value =<span class="string">"按钮"</span> id=<span class="string">"odiv"</span>/&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">var odiv = document.getElementById("odiv");</span></span><br><span class="line"><span class="regexp">odiv.onclick = function()&#123;</span></span><br><span class="line"><span class="regexp">    for(var i=0;i&lt;arr.length;i++)&#123;</span></span><br><span class="line"><span class="regexp">        document.body.innerHTML += arr[i];</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">点击事件只想触发一次的思路</span><br><span class="line"><span class="number">1.</span> 禁用按钮 ，即 odiv.style.disable = <span class="literal">true</span>;(用户体验不好)</span><br><span class="line"><span class="number">2.</span> 先清空内容，再生成  先<span class="built_in">document</span>.body.innerHTML = <span class="string">''</span>，再<span class="keyword">for</span>循环;</span><br><span class="line"><span class="number">3.</span> 判断（最外面定义一个变量为<span class="literal">true</span>,点击过后将其赋值为<span class="literal">false</span>）;</span><br></pre></td></tr></table></figure>
+<p>this:指的是调用 <strong>当前</strong> 方法（函数）的那个对象<br>当前指的是 oBtn.onclick = function()<strong>{</strong> this  —当前— <strong>}</strong><br>这种情况下当前指的是&lt;div onclick =<strong>“</strong>—当前—  <strong>“</strong>&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function fn1()&#123;</span><br><span class="line">    this</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn1()   this =&gt;window</span><br><span class="line">oDiv.onclick = fn1; this =&gt;oDiv</span><br><span class="line">oDiv.onclick = function()&#123;</span><br><span class="line">    fn1();   fn1()里的this=&gt;window</span><br><span class="line">&#125;</span><br><span class="line">&lt;div onclick =&quot;this fn1();&quot;&gt;&lt;/div&gt;  fn1();里的this指的是window</span><br></pre></td></tr></table></figure></p>
+<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h3><p>js可以为任何HTML元素添加任意个自定义属性<br>odiv.abc = true;<br>应用 ：多个图片点击切换的时候可以使用自定义属性来当开关<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    li&#123;</span><br><span class="line">    background:url(<span class="string">"img1.jpg"</span>);</span><br><span class="line">    &#125;   </span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;body&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">    &lt;li&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">aLI.onOff = true;  /</span><span class="regexp">/先添加一个自定义属性作为开关</span></span><br><span class="line"><span class="regexp">for(var i=0;i&lt;aLI.length;i++)&#123;</span></span><br><span class="line"><span class="regexp">    aLI[i].onmouseover = function()&#123;</span></span><br><span class="line"><span class="regexp">        if(this.onOff)&#123;</span></span><br><span class="line"><span class="regexp">            this.style.background = "img2.jpg"</span></span><br><span class="line"><span class="regexp">            this.onOff = false; /</span><span class="regexp">/点击过后设置开关为false</span></span><br><span class="line"><span class="regexp">        &#125;else&#123;</span></span><br><span class="line"><span class="regexp">            this.style.background = "img1.jpg"</span></span><br><span class="line"><span class="regexp">            this.onOff = true;  /</span><span class="regexp">/点击过后设置开关为true</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://images.91miandan.top/index/20190131/0eegoYROHlDm.gif" alt="mark"></p>
+<p>for（var i=0;i&lt;arr.length;i++）{<br>    aBox.index = i ;  //添加索引值<br>    //想建立“匹配”，“对应”的关系，就用索引值<br>}</p>
+<p>###遇到一排按钮，选中其中一个时，他的样式要改变，这种情况<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   <span class="number">1.</span>清除全部的<span class="class"><span class="keyword">class</span>再给当前的元素加上<span class="title">class</span></span></span><br><span class="line"><span class="class"><span class="title">btn</span>.<span class="title">onclick</span> </span>= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;boxlist.length;i++)&#123;</span><br><span class="line">      boxlist[i].className = <span class="string">""</span>;</span><br><span class="line">                 &#125;</span><br><span class="line">     <span class="keyword">this</span>.className = <span class="string">"active"</span>;</span><br><span class="line">&#125;</span><br><span class="line">     </span><br><span class="line"><span class="number">2.</span>清除上一个的<span class="class"><span class="keyword">class</span>，再给当前的元素加上<span class="title">class</span></span></span><br><span class="line"><span class="class">//拿一个变量(<span class="title">oldBox</span>)来存上一次的<span class="title">box</span>，然后每次点击都把上一次的<span class="title">className</span>清空，再把当前点击的加上<span class="title">className</span></span></span><br><span class="line"><span class="class"><span class="title">btn</span>.<span class="title">onclick</span> </span>= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    oldBox.className = <span class="string">""</span>;</span><br><span class="line">        oldBox = <span class="keyword">this</span>;   </span><br><span class="line">    <span class="keyword">this</span>.className = <span class="string">"active"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="js基础数据类型"><a href="#js基础数据类型" class="headerlink" title="js基础数据类型"></a>js基础数据类型</h3><p>ECMAScript:js中的标准，核心<br>HTML中的数据类型：block,inline,inline-block,table…<br>JS中的数据类型： 数字(NaN) 、字符串、布尔、函数、object([]、{json},null也是) 、未定义<br>charAt(&nbsp;):根据字符串下标获取字符串<br>typeof(&nbsp;) 判断数据类型  typeof(NaN) ==”number”<br>var a1=’’; alert(Number(a1)) //0<br>var a2= true; alert(Number(a2)) //true-1 false-0<br>var a3 = [&nbsp;];alert(Number(a3)) //0<br>var a3 = [‘&nbsp;’];alert(Number(a3)) //0<br>var a3 = [‘123’];alert(Number(a3)) //123<br>var a3 = [1,2,3];alert(Number(a3)) //NaN</p>
+<h2 id="var-a4-null-alert-Number-a4-0"><a href="#var-a4-null-alert-Number-a4-0" class="headerlink" title="var a4 = null; alert(Number(a4)) //0"></a>var a4 = null; alert(Number(a4)) //0</h2><p>var json = {abc:123}; alert(Number(json)) //NaN<br>var json = {&nbsp;}; alert(Number(json)) //NaN<br>var u; alert(Number(u))//NaN<br>var a3 = function(&nbsp;){alert(1)};  alert(Number(a3)) //NaN</p>
+<p>var b=’100px’ alert(parseInt(b))  //100<br>原理：从左到右逐个转换，碰到非数字就连同其后的东西一起舍弃<br>var c = 12.34元<br>alert(parseInt(c))//12 ,这时要用parseFloat()<br>var d = 12.3.4<br>alert(parseFloat(d))//12.3<br>显示类型转换（强制类型转换）：<br>Number(),ParseFloat(),parseInt()<br>隐式类型转换：<br>- &emsp;*&emsp; /&emsp; %  ‘200’-3  变成数字<br>+  &emsp;  200 +’3’  变成字符串<br>++ &ensp; -&nbsp;- &emsp; 变成数字<br>字符串比较是逐位比较： ‘1000’ &gt;’9’   //false 因为比较第一位时’1’&lt;’9’，后面就不用比了，所以false<br>！ 取反 把右边的数据类型变成布尔值<br>== 判断值<br>——————————-  数据类型转换失败结果都是NaN<br>=== 判断数据类型和值<br>typeof(NaN)&emsp; //number<br>NaN：不是数字的数字类型 not a number<br>一旦写程序出现了NaN，意味着肯定出现了非法的运算操作<br>NaN是false<br>NaN和自己不相等<br>isNaN():不是数字<br>拿来判断数字，是数字的话结果为false<br>内部原理，利用Number()来判断<br>例如：alert(isNaN(‘250’));<br>//Number()  ‘250’=&gt;250 =&gt;false<br>HTML中拿到的内容都是字符串</p>
+<h2 id="重用代码"><a href="#重用代码" class="headerlink" title="重用代码"></a>重用代码</h2><p>1.尽量保证HTML代码结构一致，可以通过父级选取子元素<br>2.把核心主程序实现，用函数包起来<br>3.把每组不同的值找出来，通过传参实现</p>
+<p>##作用域<br>域：空间，范围，区域..<br>作用：读、写</p>
+<p>script  全局变量、全局函数<br>自上而下<br>函数内部也是一个域<br>从里到外<br>浏览器解读javascript代码用：<br>“js解析器”<br>过程：<br>1）”找一些东西”：var function 参数<br>结合例子，该步就是：a = 未定义<br>所有的变量，在正式运行代码之前，都提前赋了一个值：未定义<br>fn1 = function fn1(){alert(2);}<br>所有的函数，在正式运行代码之前，都是整个函数块 </p>
+<p> js的预解析<br> 在预解析过程中，遇到重名的：只留一个<br> 变量和函数重名了，就只留下函数<br>2）逐行解读代码：<br>表达式：= + - * / % ++ – ！ 参数 …<br>所有能改变值的东西都叫表达式<br>表达式可以修改预解析的值<br>例子：<br>alert(a); //未定义<br>var a =1;// a的值被改变了，变成了1 ，所有alert(1)<br>function fn1(){alert(2);}</p>
+<p>例子：<br>var a =1;<br>function fn1(){<br>    alert(a);  //undefined   这个a在函数内部，局部的a，与函数外的a一点关系都没有<br>    var a =2;<br>}<br>fn1();<br>alert(a); //1</p>
+<p>var a =1;<br>function fn1(){<br>    alert(a);  //1  内部找不到a，回顺着作用域链到全局作用域找a<br>     a =2;  //对全局中的a作出了更改<br>}<br>fn1();<br>alert(a) //2</p>
+<p>var a =1;<br>function fn1(a){  //有参数，相当于 var a<br>    alert(a);  //undefined<br>     a =2;  //对局部中的a作出更改<br>}<br>fn1();<br>alert(a) //1   全局的a没有被更改</p>
+<p>var a =1;<br>function fn1(a){  //参数被赋值了，相当于 var a =1<br>    alert(a);  //1<br>     a =2;  //对局部中的a作出更改<br>}<br>fn1(a); //参数被赋值了<br>alert(a) //1   全局的a没有被更改</p>
+<blockquote>
+<p>调用函数内局部变量的方法<br>1.用全局变量<br>var str = ‘’;<br>function fn1(){<br>    var a = “big chicken”<br>    str = a; //函数内找不到str  到外部找到了，然后改了外部str的值<br>}<br>fn1();<br>alert(‘str’);</p>
+</blockquote>
+<p>2.局部函数调用<br>function fn2(){<br>    var a = ‘999’<br>    fn3(a);<br>}<br>fn2();<br>function fn3(a){<br> alert(a);<br>}</p>
+<p>alert(fn1); //firefox 浏览器不能对下面的函数进行预解析<br>if(true){<br>    var a =1;<br>    function fn1(){<br>    alert(123); //12345<br>}<br>}<br>启示：尽量不要在 if或 for里面 定义变量</p>
+<h2 id="运算符、流程控制"><a href="#运算符、流程控制" class="headerlink" title="运算符、流程控制"></a>运算符、流程控制</h2><p>&amp;&amp;的应用<br>var a =12 &lt;90 &amp;&amp; 20;<br>alert(a) //20</p>
+<p>var a =120 &lt;90 &amp;&amp; 20;<br>alert(a) //false</p>
+<p>||的应用 （）<br>var b= 120&lt;90 ||20<br>alert(b) //20</p>
+<p>break 跳出<br>continue 跳过</p>
+<p>for(var i=0;i&lt;6;i++){<br>    if(i==4){<br>    break  //跳出整个for循环，循环结束<br>    continue //跳过 i==4这次for循环，继续执行i==5这个for循环<br>}<br>alert(i);<br>}</p>
+<p>真假的问题：数据类型-数字(NaN)、字符串、布尔、函数、对象（elem、[]、{}、null）、未定义<br>真：非0的数字、非空字符串、true、函数、能找到的元素、[]、{}<br>假：0、NaN、空字符串’’、false、不能找到的元素、null、未定义</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="return-返回值"><a href="#return-返回值" class="headerlink" title="return 返回值"></a>return 返回值</h3><p>//数字 、字符串、布尔、函数、对象（元素\ []\ {} \null）、未定义</p>
+<p>return +函数的情况</p>
+<p>fn2()()  //第一个括号是调用外面那层函数。第二个括号是调用里面那个函数<br>function fn2(a){<br>    return function(b){<br>    alert(a+b);  //30<br>}<br>}<br>return :返回值<br>1）函数+括号：fn1() ==&gt;  return 后面的值</p>
+<p>2） 所有的函数默认返回值都是未定义 undefined<br>alert(fn4())<br>function fn4(){<br>    // return ; 加不加return ，返回值都是undefined<br>}<br>3）return 后面任何代码都不执行</p>
+<h3 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h3><p>fn1(1,2,3);   //实参—实际传递的参数<br>//function fn1(a,b,c) {形参—形式上，abc这些名代表123}<br>function fn1(){<br>    //arguments =&gt;[1,2,3] —-实参的集合，不是数组但是有数组特性<br>}<br>当函数的参数无法确定时，用arguments  </p>
+<h3 id="currentStyle与getComputedStyle"><a href="#currentStyle与getComputedStyle" class="headerlink" title="currentStyle与getComputedStyle"></a>currentStyle与getComputedStyle</h3><p>getComputedStyle()  //获取的是计算机（浏览器）计算后的样式<br>/<em><br>IE6 7 8 下有兼容性问题
+ </em>/</p>
+<p>currentStyle()<br>/<em><br>标准模式下不兼容
+ </em>/</p>
+<p>为了两者都兼容，写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（$(<span class="string">'div1'</span>).currentStyle）&#123;</span><br><span class="line">    alert($(<span class="string">'div1'</span>).currentStyle.width);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">     alert(getComputedStyle($(<span class="string">'div1'</span>)).width);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>/*<br>使用注意事项：</p>
+<ol>
+<li>background:url() red …  复合样式（不要获取）</li>
+<li>backgrounColor            单一样式（不要用来做判断）</li>
+<li>不要有空格  ‘ backgrounColor’ 直接报undefined</li>
+<li>不要获取未设置的样式：不兼容<br>*/    </li>
+</ol>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><p>定时器：时间概念<br> var timer = setInterval(函数，毫秒);重复执行<br> 函数调用的方式：<br> 1.setInterval()<br> 2.fn1() //直接调用<br> 3.document.onclick = fn1  //事件调用</p>
+<p> clearInterval(timer) //清除定时器</p>
+<p> var timer = setTimeout(函数，毫秒);执行一次<br>  clearTimeout(timer) //清除定时器</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/20/javascript堆栈/" rel="next" title="javascript堆栈">
+                <i class="fa fa-chevron-left"></i> javascript堆栈
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/11/sublime快捷键/" rel="prev" title="sublime快捷键">
+                sublime快捷键 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">webfamer</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#for循环小练习"><span class="nav-number">1.</span> <span class="nav-text">for循环小练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义属性"><span class="nav-number">2.</span> <span class="nav-text">自定义属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js基础数据类型"><span class="nav-number">3.</span> <span class="nav-text">js基础数据类型</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#var-a4-null-alert-Number-a4-0"><span class="nav-number"></span> <span class="nav-text">var a4 = null; alert(Number(a4)) //0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重用代码"><span class="nav-number"></span> <span class="nav-text">重用代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符、流程控制"><span class="nav-number"></span> <span class="nav-text">运算符、流程控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number"></span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#return-返回值"><span class="nav-number">1.</span> <span class="nav-text">return 返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arguments"><span class="nav-number">2.</span> <span class="nav-text">arguments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#currentStyle与getComputedStyle"><span class="nav-number">3.</span> <span class="nav-text">currentStyle与getComputedStyle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时器"><span class="nav-number">4.</span> <span class="nav-text">定时器</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">webfamer</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
