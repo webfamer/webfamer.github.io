@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="vue知识点回顾">
+<meta name="description" content="vue基础回顾">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue学习">
-<meta property="og:url" content="http://yoursite.com/2019/01/18/LearnVue/index.html">
+<meta property="og:title" content="vue基础学习">
+<meta property="og:url" content="http://yoursite.com/2019/01/18/Vue基础/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="vue知识点回顾">
+<meta property="og:description" content="vue基础回顾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T10:25:55.805Z">
+<meta property="og:image" content="http://images.91miandan.top/index/20190227/3Kx6PAPkXjV4.png?imageslim">
+<meta property="og:updated_time" content="2019-03-18T00:07:57.362Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue学习">
-<meta name="twitter:description" content="vue知识点回顾">
+<meta name="twitter:title" content="vue基础学习">
+<meta name="twitter:description" content="vue基础回顾">
+<meta name="twitter:image" content="http://images.91miandan.top/index/20190227/3Kx6PAPkXjV4.png?imageslim">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/18/LearnVue/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/18/Vue基础/">
 
 
 
 
 
-  <title>vue学习 | 学习笔记</title>
+  <title>vue基础学习 | 学习笔记</title>
   
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/18/LearnVue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/18/Vue基础/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="webfamer">
@@ -249,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vue学习</h1>
+          <h1 class="post-title" itemprop="name headline">vue基础学习</h1>
         
 
         <div class="post-meta">
@@ -273,8 +275,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2019-02-23T18:25:55+08:00" content="2019-02-23">
-                2019-02-23
+              <time itemprop="dateUpdated" datetime="2019-03-18T08:07:57+08:00" content="2019-03-18">
+                2019-03-18
               </time>
             </span>
           
@@ -307,7 +309,7 @@
       
 
       
-        <p>vue知识点回顾<br><a id="more"></a></p>
+        <p>vue基础回顾<br><a id="more"></a></p>
 <h2 id="vue语法"><a href="#vue语法" class="headerlink" title="vue语法"></a>vue语法</h2><h3 id="v-on和v-bind的区别"><a href="#v-on和v-bind的区别" class="headerlink" title="v-on和v-bind的区别"></a>v-on和v-bind的区别</h3><p>v-bind 指令用于设置HTML属性：v-bind:href  缩写为 <strong>:href</strong><br>v-on   指令用于绑定HTML事件 ：v-on:click 缩写为 <strong>\@click</strong>  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id =<span class="string">"app"</span>&gt; </span><br><span class="line">&lt;p&gt;&#123;&#123;message&#125;&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;input type="text" v-on:input = "inputHandle"&gt; /</span><span class="regexp">/模板 </span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> message = <span class="string">"hello miaov"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> vue(&#123;</span><br><span class="line">  el:<span class="string">"#app"</span>,<span class="comment">//element</span></span><br><span class="line">  data:&#123;   <span class="comment">//数据对象</span></span><br><span class="line">       message  <span class="comment">//message:message,es6 的缩写   </span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;<span class="comment">//定义方法，方法中的this指向实例</span></span><br><span class="line">    fn()&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">123</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    inputHandle(ev)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(ev.target.value)<span class="comment">//ev拿到事件参数，ev.target拿到input</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -318,7 +320,7 @@
 <p>只有在data里面计划好的属性才可以响应<br>例如：</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data：&#123;</span><br><span class="line">   msg:<span class="string">'hello'</span>,</span><br><span class="line">   miaov:&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">vm.miaov.ketang = <span class="string">"ss"</span><span class="comment">//这属性加不上，因为在miaov里面并没有ketang这个属性</span></span><br></pre></td></tr></table></figure>
-<p><br><strong>解决办法</strong><br><strong>1.</strong>&emsp;调用Vue的静态方法set<br>语法： Vue.set(target,prop,value)<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function()&#123;  </span><br><span class="line"></span><br><span class="line">  Vue.set(vm.miaov,ketang,&apos;我是新加的&apos;)</span><br><span class="line"></span><br><span class="line">&#125;，2000)</span><br></pre></td></tr></table></figure></p>
+<p><br><strong>解决办法</strong><br><strong>1.</strong>&emsp;调用Vue的静态方法set<br>语法： Vue.$set(target,prop,value)<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function()&#123;  </span><br><span class="line"></span><br><span class="line">  Vue.set(vm.miaov,ketang,&apos;我是新加的&apos;)</span><br><span class="line"></span><br><span class="line">&#125;，2000)</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p><strong>知识点补充</strong><br>挂在在函数上的方法称为静态方法，挂载在函数上的属性称之为静态属性，调用通过函数去调用<br>fn.miaov = function(){<br>    //称miaov这个方法为静态方法<br>}<br>挂在在原型上的方法，例如<br>let arr = new Array() ; &emsp;//实例<br>arr.push()  &emsp;//原型上的方法必须通过实例去调用  </p>
 </blockquote>
@@ -341,6 +343,55 @@
 <p>需要传参： v-on:事件名 = ‘事件处理函数(参数)’  </p>
 <h4 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span> =<span class="string">"changefn($event,123)"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span> //手动传事件参数，不然函数changefn里的ev会被当成形参</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  vm = Vue(&#123;</span></span><br><span class="line"><span class="javascript">    el:<span class="string">"#app"</span>,</span></span><br><span class="line"><span class="undefined">    methods:&#123;</span></span><br><span class="line"><span class="javascript">      changefn(ev,param)&#123;  <span class="comment">//第一个接收事件参数，第二个接收传过来的参数</span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>对象：{ } ,特点：key值不能重复<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">0:&apos;苹果&apos;,</span><br><span class="line">1:&apos;第3版本&apos;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>删除对象属性：this.$delete(this.choose//对象名,key//属性值)</p>
+</blockquote>
+<blockquote>
+<p>body和document不能作为Vue的模板 </p>
+</blockquote>
+<h4 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h4><p>把对处理数据的逻辑抽离在计算属性中，使得模板更加轻量易读<br>定义计算属性：computed:{<br>}<br><strong>注意点：</strong></p>
+<ol>
+<li>计算属性挂载在实例身上</li>
+<li>计算属性对应的函数this都指向实例</li>
+<li>计算属性会把结果缓存，可在模板中重复使用</li>
+<li>只给计算属性一个函数，默认这个函数是在取值的时候触发，这个函数是get函数<br>对计算属性的操作：</li>
+<li>设置值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&#123;&#123;ischeckeall = 10&#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>设置值的时候触发set(){}函数</p>
+<ol start="2">
+<li>取值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&#123;&#123;ischeckeall&#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>取值的时候触发 get(){}函数</p>
+<p>两个函数都要的时候计算属性要为对象写法：<br>isCheckAll:{<br>  get(){},<br>  set(newValue){}<br>}</p>
+<h3 id="Vue响应式原理"><a href="#Vue响应式原理" class="headerlink" title="Vue响应式原理"></a>Vue响应式原理</h3><p>把一个普通的javaScript对象传给Vue实例的data选项<br>Vue将遍历此对象所有的属性，并使用Object.defineProperty把这些属性全部转成getter/setter<br>Vue内部会对数据进行劫持操作，进而依赖追踪，在属性被访问和修改时通知变化</p>
+<p>//使用数据的时候，要先对数据进行劫持(代理)<br>//使用Object.defineProperty劫持数据，把属性转成访问器的方式</p>
+<p>访问器方式：<br>/<em><br>getter 获取属性触发的<br>setter 设置属性触发的
+ </em>/</p>
+<h4 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h4><p>作用：定义属性，也可在原有的属性上描述</p>
+<p>用法：</p>
+<ol>
+<li>定义属性<br>Object.defineProperty(data,’miaov’,{<br>value:’ketang’<br>})<br>Object.defineProperty(对象名，属性名，属性值描述)</li>
+<li>在原有属性上改写<br>Object.defineProperty(data,’title’,{<br>configurable:false //是否可被删除<br>value:’重新定义了’,<br>enumerable:true   //是否可以被枚举(即for循环遍历),默认为false<br>writable:false  //设置为false 不允许改写<br>})<br>Object.defineProperty(对象名，原有属性名，属性值描述)</li>
+</ol>
+<p>对象的属性删除： delete data.title </p>
+<h4 id="实现Vue响应式原理"><a href="#实现Vue响应式原理" class="headerlink" title="实现Vue响应式原理"></a>实现Vue响应式原理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;button id=&quot;btn&quot;&gt;改变数据&lt;button&gt;</span><br><span class="line">&lt;h2 id=&quot;title&quot;&gt;这是标题&lt;/h2&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var data =&#123;</span><br><span class="line">  title:&apos;新闻&apos;</span><br><span class="line">&#125;</span><br><span class="line">//数据劫持，转成getter 和setter</span><br><span class="line">observer(data)</span><br><span class="line">function observer(obj)&#123;//封装函数遍历劫持data里的每一个属性</span><br><span class="line">  //拿到对象上的所有key值</span><br><span class="line">  Object.keys(obj).forEach((item)=&gt;&#123;&#125;)  //Object.keys(obj)相当于一个数组</span><br><span class="line">    defineReactive(obj,item,obj[item])</span><br><span class="line">&#125;</span><br><span class="line">//定义一个函数专门处理响应</span><br><span class="line">function defineReactive(obj,key,value)&#123;</span><br><span class="line">    ****Object.defineProperty(obj,key,&#123;</span><br><span class="line">        get()&#123;</span><br><span class="line">          return value;</span><br><span class="line">        &#125;,</span><br><span class="line">        set(newValue)&#123;</span><br><span class="line">          value = newValue</span><br><span class="line">          title.innnetHTML = newValue;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var title = document.getElementById(&apos;title&apos;);</span><br><span class="line">var btn = document.getElementById(&apos;btn&apos;);</span><br><span class="line">title.innertHTML =  data.title; //刚开始的时候把data里面的title的值赋给他的innerhtml(即只起到初始赋值的作用，和数据劫持方法无关)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">btn.onclick = function()&#123;</span><br><span class="line">  data.title = &apos;数据变了&apos;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h3><p>声明式：<br>只需要知道声明在哪里where做什么what，而不需要知道怎么实现how<br>命令式：<br>需要知道声明在哪里where做什么what,需要知道怎么实现how<br>声明式渲染理解：  </p>
+<ol>
+<li>DOM状态只是数据状态的一个映射  </li>
+<li>所有的逻辑尽可能在状态的层面去进行  </li>
+<li>当状态改变了，view会被框架自动更新到合理状态  </li>
+</ol>
+<p>例子： 把数组中的每一个属性X2,存在数组中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//命令式：</span><br><span class="line">var newArr = [];</span><br><span class="line">for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">   newArr.push(arr[i]*2);</span><br><span class="line">&#125;</span><br><span class="line">console.log(newArr);</span><br><span class="line"></span><br><span class="line">//声明式</span><br><span class="line">let newArr2 = arr.map(item =&gt;item*2);</span><br><span class="line">console.log(newArr2);</span><br></pre></td></tr></table></figure></p>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><p>v-bind: 动态绑定数据。 简写为&ensp;：<br>v-on:监听DOM事件，简写为&ensp;@<br>v-for:对一组数据循环生成对应的结构<br>v-if:根据表达式的值的真假条件渲染元素和移出元素<br>v-show：根据表达式的真假条件，切换元素的css的display属性  </p>
+<h4 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h4><p>v-model:在表单元素上创建双向数据绑定<br>数据 -&gt;view<br>view -&gt;数据  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v-text: //避免渲染元素过多时出现双大括号情况  </span><br><span class="line">更新元素的textContent，可代替&#123;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>v-html://插入的html必须可靠，不然容易受到xss攻击<br>更新元素的innerHTML<br>不使用这个指令，插入的html结构不作为模板编译，作为文本显示<br>不要插入不安全的html结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例子：</span><br><span class="line">var message = `&lt;div&gt;hello,我很友善&lt;/div&gt;&lt;img src=&quot;./a.jgp&quot;</span><br><span class="line">   onerror=&quot;document.getElementById(&apos;pass&apos;).value&quot;`  </span><br><span class="line">当image图片不存在时，会触发onerror函数，里面可以执行自定义的代码，甚至可以执行ajax把密码发送到服务器上</span><br></pre></td></tr></table></figure></p>
+<p>v-cloak:<br>隐藏未编译的Mustache标签直到实例准备完毕<br>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">[v-cloak]&#123;</span><br><span class="line">  display:none</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>v-once<br>只渲染一次，随后数据改变将不在重新渲染，视为静态内容，用于优化更新性能</p>
+<h4 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h4><p>方法只有纯粹的数字逻辑，而不是去处理DOM事件细节<br>@事件名.修饰符.修饰符 = ‘’<br>语法:v-on:事件名.修饰符 = “事件处理函数”.stop(阻止冒泡) 、.prevent(阻止默认事件)   、.capture(捕获，先触发)、.self、.once(只触发一次)<br>按键修饰符 .enter(enter键)、.tab(tab键)  、.delete、.esc、.space、.up、.down、.left、.right<br>使用方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. &lt;input type=&quot;text&quot; @keyup.enter = &quot;uphandle&quot;&gt;</span><br><span class="line">2. &lt;input type=&quot;text&quot; @keyup.65 = &quot;uphandle&quot;&gt; //直接写键值，这样只有等于这个键值的时候触发uphandel函数</span><br></pre></td></tr></table></figure></p>
+<p><strong>捕获与冒泡</strong><br><img src="http://images.91miandan.top/index/20190227/3Kx6PAPkXjV4.png?imageslim" alt="mark"><br>当点击目标元素的时候，事件流从document     到目标元素这一过程叫<strong>捕获</strong>，事件流从目标元素传递到document这一过程叫<strong>冒泡</strong>  </p>
 
       
     </div>
@@ -454,7 +505,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -491,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue语法"><span class="nav-number">1.</span> <span class="nav-text">vue语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-on和v-bind的区别"><span class="nav-number">1.1.</span> <span class="nav-text">v-on和v-bind的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MVVM"><span class="nav-number">1.1.1.</span> <span class="nav-text">MVVM</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断"><span class="nav-number">1.3.</span> <span class="nav-text">条件判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事件对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">事件对象</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue语法"><span class="nav-number">1.</span> <span class="nav-text">vue语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-on和v-bind的区别"><span class="nav-number">1.1.</span> <span class="nav-text">v-on和v-bind的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MVVM"><span class="nav-number">1.1.1.</span> <span class="nav-text">MVVM</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断"><span class="nav-number">1.3.</span> <span class="nav-text">条件判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事件对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">事件对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算属性"><span class="nav-number">1.3.2.</span> <span class="nav-text">计算属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue响应式原理"><span class="nav-number">1.4.</span> <span class="nav-text">Vue响应式原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-defineProperty"><span class="nav-number">1.4.1.</span> <span class="nav-text">Object.defineProperty</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现Vue响应式原理"><span class="nav-number">1.4.2.</span> <span class="nav-text">实现Vue响应式原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明式渲染"><span class="nav-number">1.5.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令"><span class="nav-number">1.6.</span> <span class="nav-text">指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#双向数据绑定"><span class="nav-number">1.6.1.</span> <span class="nav-text">双向数据绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件修饰符"><span class="nav-number">1.6.2.</span> <span class="nav-text">事件修饰符</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

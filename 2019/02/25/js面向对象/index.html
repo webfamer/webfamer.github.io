@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="js面向对象知识点总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js面向对象">
+<meta property="og:url" content="http://yoursite.com/2019/02/25/js面向对象/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="js面向对象知识点总结">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-18T00:11:45.570Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js面向对象">
+<meta name="twitter:description" content="js面向对象知识点总结">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/25/js面向对象/">
+
+
+
+
+
+  <title>js面向对象 | 学习笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学习笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/25/js面向对象/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="webfamer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js面向对象</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T17:29:10+08:00">
+                2019-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2019-03-18T08:11:45+08:00" content="2019-03-18">
+                2019-03-18
+              </time>
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>js面向对象知识点总结<br><a id="more"></a><br>我们把系统自带的对象叫做系统对象<br>面向对象编程(OOP)的特点  </p>
+<ol>
+<li>抽象：抓住核心问题  </li>
+<li>封装：只能通过对象来访问方法  </li>
+<li>继承：从已有的对象上继承出新的对象(其实就是去复用代码)  </li>
+<li>多态：多对象的不同形态 (其实也是复用代码)   类比一台电脑，有个USB接口，可以连接各种设备  </li>
+</ol>
+<h3 id="对象的组成"><a href="#对象的组成" class="headerlink" title="对象的组成"></a>对象的组成</h3><p>方法(行为，操作) —函数：过程，动态的<br>属性—-变量：状态，静态的  </p>
+<h3 id="工厂方式与构造函数"><a href="#工厂方式与构造函数" class="headerlink" title="工厂方式与构造函数"></a>工厂方式与构造函数</h3><h4 id="工厂方式"><a href="#工厂方式" class="headerlink" title="工厂方式"></a>工厂方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function createPreson(name)&#123;</span><br><span class="line">    //1.原料</span><br><span class="line">    var obj = new Object();</span><br><span class="line">    //2.加工</span><br><span class="line">    obj.name = name;</span><br><span class="line">    obj.showName = function()&#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">    //3.出厂</span><br><span class="line">    return obj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = createPreson(&apos;小明&apos;);</span><br><span class="line">p1.showName(); //小明</span><br><span class="line">var p2 = createPreson(&apos;小强&apos;);</span><br><span class="line">p2.showName(); //小强</span><br></pre></td></tr></table></figure>
+<p>当new去调用一个函数：这个时候函数中的this就是创建出来的对象,而且函数的返回值直接就是<br>this(隐式返回)<br>new后面调用的函数：叫做构造函数<br>依据上面这句话我们可以简写函数如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function createPreson(name)&#123;</span><br><span class="line">  </span><br><span class="line">    this.name = name;</span><br><span class="line">    this.showName = function()&#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">var p1 = new CreatePreson(&apos;小明&apos;);</span><br><span class="line">p1.showName(); //小明</span><br><span class="line">var p2 = new CreatePreson(&apos;小强&apos;);</span><br><span class="line">p2.showName(); //小强</span><br></pre></td></tr></table></figure></p>
+<p>基本类型：赋值的时候只是值的复制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a =5,</span><br><span class="line">var b =a,</span><br><span class="line">b +=3;</span><br><span class="line">alert(b);//8</span><br><span class="line">alert(a);//5</span><br></pre></td></tr></table></figure></p>
+<p>对象类型：赋值不仅是值的复制，也是引用的传递<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">var b = a; //这时候把a的值及其引用传给了b</span><br><span class="line">b.push(4);</span><br><span class="line">alert(b);//[1,2,3,4]</span><br><span class="line">alert(a);//[1,2,3,4]</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a =[1,2,3];</span><br><span class="line">var b = a;</span><br><span class="line">b =[1,2,3,4] //只要在程序中出现赋值,必然要在内存中重新生成(此时b在内存中新的位置重新生成了，与a没关系了)</span><br><span class="line">alert(b);//[1,2,3,4]</span><br><span class="line">alert(a);//[1,2,3]</span><br></pre></td></tr></table></figure>
+<h4 id="值和对象比较的区别"><a href="#值和对象比较的区别" class="headerlink" title="值和对象比较的区别"></a>值和对象比较的区别</h4><p>值的比较：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = 5,</span><br><span class="line">var b = 5;</span><br><span class="line">alert(a ==b)  //基本类型：值相同就可以</span><br></pre></td></tr></table></figure></p>
+<p>对象的比较：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">var b = [1,2,3];</span><br><span class="line">alert(a==b)//false  //对象类型：值和引用都相同</span><br><span class="line"></span><br><span class="line">var a = [1,2,3];</span><br><span class="line">var b = a;</span><br><span class="line">alert(a==b)//true</span><br></pre></td></tr></table></figure></p>
+<h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><p>原型：去改写对象下面公用的方法或属性，让公用的方法或者属性在内存中存在一份(提高性能)<br>类比学习：<br>原型：css中的class<br>普通方法：css中的style<br>style的优先级比class高，所以普通方法优先级也比原型高<br>原型：prototype 写在构造函数下面(即new后面的那个函数) Array.prototype    </p>
+<p>总的写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function 构造函数()&#123;</span><br><span class="line">    this.属性</span><br><span class="line">&#125;</span><br><span class="line">构造函数.原型.方法 = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用：<br>var 对象1 = new 构造函数();<br>对象1.方法();<br>在js源码中：系统对象也是基于原型的程序<br>尽量不要去修改或者添加系统对象下面的方法和属性  </p>
+<h3 id="包装对象"><a href="#包装对象" class="headerlink" title="包装对象"></a>包装对象</h3><p>基本类型都有自己的包装对象 ：String Number Boolean<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = &apos;hello&apos;//这里str还是基本对象</span><br><span class="line">str.charAt(0);//基本类型会找到对应的包装对象类型，然后包装对象把所有的属性和方法给了基本类型,然后包装对象消失</span><br></pre></td></tr></table></figure></p>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>实例对象与原型对象之间的连接,叫做原型链<br>原型链的最外层：Object.prototype</p>
+<h3 id="面向对象的一些属性和方法"><a href="#面向对象的一些属性和方法" class="headerlink" title="面向对象的一些属性和方法"></a>面向对象的一些属性和方法</h3><p>hasOwnProperty():看是不是对象自身下面的属性  //这个方法在Object身上<br>constructor:查看对象的构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Aaa()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var a1= new Aaa();</span><br><span class="line">alert(a1.constructor);//Aaa</span><br></pre></td></tr></table></figure></p>
+<p>》每个原型都会自动添加constructor属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function Aaa()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">//Aaa.prototype.constructor = Aaa;//每一个函数都会有的，都会自动生成的</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">有些时候会不经意间改变constructor</span><br><span class="line">function Aaa()&#123;&#125;;</span><br><span class="line">Aaa.prototype = &#123; //这里对原型重新复制，导致其到了内存中新的位置,覆盖了原来的Aaa.prototype.constructor  = Aaa 这个语句，所以才导致了结果为 object</span><br><span class="line">    name:&apos;小明&apos;,</span><br><span class="line">    age:20</span><br><span class="line">&#125;;</span><br><span class="line">var a1 = new Aaa();</span><br><span class="line">alert(a1.constructor)//function object()&#123;[native code]&#125;</span><br></pre></td></tr></table></figure>
+<p>》For in的时候有些属性是找不到的 //一些系统自带的属性是无法被for in 到的<br>》避免修改constructor属性<br>instanceof:运算符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Aaa()&#123;</span><br><span class="line">&#125;</span><br><span class="line">var a1 = new Aaa();</span><br><span class="line">alert(a1 instanceof Aaa)//如果a1与Aaa在同一原型链上，则返回true</span><br><span class="line"></span><br><span class="line">判断类型：</span><br><span class="line">var arr = [];</span><br><span class="line">alert(arr instanceof Array);//true</span><br></pre></td></tr></table></figure></p>
+<p>》对象与构造函数在原型链上是否有关系<br>toString():Object上的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//toString():系统对象下面的都是自带的，自己写的对象都是通过原型链找object下面的  </span><br><span class="line">var arr = [];</span><br><span class="line">alert(arr.toString ===object.prototype.toString);//false</span><br><span class="line">--------------------------------------------------------------</span><br><span class="line">function Aaa()&#123;</span><br><span class="line">&#125;</span><br><span class="line">var a1 = new Aaa();</span><br><span class="line">alert(a1.toString == object.prototype.tostring);//true</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">可以利用tostring进行进制转换：  </span><br><span class="line">var num = 255</span><br><span class="line">alert(num.toString(16))// &apos;ff&apos;</span><br><span class="line"></span><br><span class="line">判断是不是数组：(基本上是最完美的判断是否是数组的方法)</span><br><span class="line">var arr = [];</span><br><span class="line">alert(object.prototype.toString.call(arr) == &apos;[object Array]&apos;) //true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">在这种情况下可以体现出第三中方法的优势  </span><br><span class="line">window.onload = function()&#123;</span><br><span class="line">    var OF = document.createElement(&apos;iframe&apos;);</span><br><span class="line">    document.body.appendChild(OF);</span><br><span class="line">    var ifArray = window.frames[0].Array;</span><br><span class="line">    var arr = new ifArray();</span><br><span class="line"></span><br><span class="line">    alert(arr.constructor ==Array);//false</span><br><span class="line">    alert(arr instanceof Array);//false</span><br><span class="line">    alert(object.prototype.tostring.call(arr) ==&apos;[object Array]&apos;);//true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/flex布局/" rel="next" title="Flex布局">
+                <i class="fa fa-chevron-left"></i> Flex布局
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/27/Vue进阶/" rel="prev" title="Vue进阶学习">
+                Vue进阶学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">webfamer</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的组成"><span class="nav-number">1.</span> <span class="nav-text">对象的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方式与构造函数"><span class="nav-number">2.</span> <span class="nav-text">工厂方式与构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工厂方式"><span class="nav-number">2.1.</span> <span class="nav-text">工厂方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#值和对象比较的区别"><span class="nav-number">2.2.</span> <span class="nav-text">值和对象比较的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型"><span class="nav-number">3.</span> <span class="nav-text">原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包装对象"><span class="nav-number">4.</span> <span class="nav-text">包装对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型链"><span class="nav-number">5.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的一些属性和方法"><span class="nav-number">6.</span> <span class="nav-text">面向对象的一些属性和方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">webfamer</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

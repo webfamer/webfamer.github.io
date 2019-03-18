@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Vue知识点进阶">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue进阶学习">
+<meta property="og:url" content="http://yoursite.com/2019/02/27/Vue进阶/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="Vue知识点进阶">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://images.91miandan.top/index/20190227/g6QrbPfzNkTh.png?imageslim">
+<meta property="og:image" content="http://images.91miandan.top/index/20190227/NcDOXI421uoJ.png?imageslim">
+<meta property="og:updated_time" content="2019-03-18T00:28:43.654Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue进阶学习">
+<meta name="twitter:description" content="Vue知识点进阶">
+<meta name="twitter:image" content="http://images.91miandan.top/index/20190227/g6QrbPfzNkTh.png?imageslim">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/27/Vue进阶/">
+
+
+
+
+
+  <title>Vue进阶学习 | 学习笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学习笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/Vue进阶/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="webfamer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vue进阶学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T11:03:47+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2019-03-18T08:28:43+08:00" content="2019-03-18">
+                2019-03-18
+              </time>
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Vue知识点进阶<br><a id="more"></a></p>
+<h1 id="Vue是什么"><a href="#Vue是什么" class="headerlink" title="Vue是什么"></a>Vue是什么</h1><p>构建用户的渐进式框架，只关注视图层<br><img src="http://images.91miandan.top/index/20190227/g6QrbPfzNkTh.png?imageslim" alt="mark"><br>渐进式： Vue为我们提供了核心的源码和周边的工具，如果只想做个数据渲染，那么只需要用到其 <strong>声明式渲染</strong>这个核心功能就可以了，然后如果项目界面分N多个小模块，就再用上 <strong>组件系统</strong>，再想做个单页应用或者移动端，这时候再用上 <strong>客户端路由</strong>,组件过多需要管理的时候再用上 <strong>大规模状态管理</strong>,当团队里面需要共同环境，在用上 <strong>构建工具</strong><br>总结来说：当你用到哪个功能就去用他，不必一下子把全部东西都用上，可以一点一点往上去使用</p>
+<h2 id="Vue的两个核心点："><a href="#Vue的两个核心点：" class="headerlink" title="Vue的两个核心点："></a>Vue的两个核心点：</h2><ol>
+<li>响应的数据绑定<br>当数据发生改变时 —&gt;自动更新视图<br>利用Object.definedProperty中的setter/getter代理数据，监控数据的操作</li>
+<li>可组合的视图组件<br><img src="http://images.91miandan.top/index/20190227/NcDOXI421uoJ.png?imageslim" alt="mark"><br>把ui界面映射为组件树<br>划分的组件可维护，可重用，可测试</li>
+</ol>
+<h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><p>由于js运行速度很快,大量操作DOM会导致js变慢。<br>在改变数据时重新渲染页面会把数据没有改变的DOM也重新渲染一遍造成资源的浪费<br>为了解决这个问题就在内存中生成与DOM相对应的数据结构,称之为 <strong>虚拟DOM</strong>  这样在页面更新时能智能计算出页面渲染所需的最小代价并应用到操作上</p>
+<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><h3 id="html模板"><a href="#html模板" class="headerlink" title="html模板"></a>html模板</h3><p>基于DOM的模板，模板都是可解析的有效html</p>
+<h4 id="怎么插值"><a href="#怎么插值" class="headerlink" title="怎么插值"></a>怎么插值</h4><p>文本：使用”Mustache”语法(双大括号) <br>作用：替换实例上的属性值,当值改变时,插值内容处会自动更新</p>
+<h3 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h3><p>template 字符串<br>template选项对象的属性，会替换挂着元素内容<br>根节点只有一个</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;demo&quot;&gt;</span><br><span class="line">//vue会自动把template内容加载到这来</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">let obj =&#123;</span><br><span class="line">    abc:123</span><br><span class="line">&#125;;</span><br><span class="line">var  str = &apos;&lt;div&gt;hellw,&#123;&#123;abc&#125;&#125;&lt;/div&gt;&apos;  //根节点只有一个(即只能有一个div)</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">    el:&quot;#demo&quot;,</span><br><span class="line">    data:obj,</span><br><span class="line">    template:str</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>方式二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;demo&quot;&gt;</span><br><span class="line">//vue会自动把template内容加载到这来</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;x-template&quot; id=&quot;temp&quot;&gt;//模板写到script模板里面</span><br><span class="line">&lt;div&gt;hello,&#123;&#123;abc&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">let obj =&#123;</span><br><span class="line">    abc:123</span><br><span class="line">&#125;;</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">    el:&quot;#demo&quot;,</span><br><span class="line">    data:obj,</span><br><span class="line">    template:&quot;#temp&quot;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="rander函数"><a href="#rander函数" class="headerlink" title="rander函数"></a>rander函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;demo&quot;&gt;</span><br><span class="line">//vue会自动把template内容加载到这来</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">bg&#123;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">let obj =&#123;</span><br><span class="line">    abc:123</span><br><span class="line">&#125;;</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">    el:&quot;#demo&quot;,</span><br><span class="line">    data:obj,</span><br><span class="line">    render(createElement)&#123;</span><br><span class="line">        &quot;ul&quot;,</span><br><span class="line">        &#123;</span><br><span class="line">            class:&#123;</span><br><span class="line">                bg:true</span><br><span class="line">            &#125;,style&#123;</span><br><span class="line">                fontSize:&quot;50px&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            attrs&#123;</span><br><span class="line">                abc:miaov  //添加自定义属性 </span><br><span class="line">            &#125;,</span><br><span class="line">            domProps:&#123;</span><br><span class="line">                innerHTML:&quot;&lt;li&gt;我是html&lt;/li&gt;&quot;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">        [</span><br><span class="line">            createElement(&apos;li&apos;,1),</span><br><span class="line">            createElement(&apos;li&apos;,2),</span><br><span class="line">            createElement(&apos;li&apos;,3)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><p>除了vue内置指令，还可以自己设置指令<br>选项对象的directives属性<br>{<br>    directives:{}<br>}<br>钩子函数：<br>update被绑定元素所在的模板更新时调用<br>钩子函数中的参数：<br>el:指令所绑定的元素，可以直接操作DOM<br>binding：一个对象<br>value:指令的绑定值<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">directives:&#123;</span><br><span class="line">       &quot;focus&quot;:&#123;</span><br><span class="line">           update(el,binding)&#123;</span><br><span class="line">               if(binding)&#123;</span><br><span class="line">                   el.focus()</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="存取localStorage的值"><a href="#存取localStorage的值" class="headerlink" title="存取localStorage的值"></a>存取localStorage的值</h3><p>var store = {<br>    save(key,value){<br>    localStorage.setItem(key,value);<br>},<br>fetch(key){//获取的时候只需要key值就可以把对应的value值取出来<br>    return localStorage.getItem(key);<br>}<br>}</p>
+<h3 id="watch监控数据变化"><a href="#watch监控数据变化" class="headerlink" title="watch监控数据变化"></a>watch监控数据变化</h3><p>watch：{ //监控list这个属性，当这个属性对应的值发生变化就会执行对应的函数<br>  不需要深度监控：<br>  list:function(){</p>
+<p>}<br>需要深度监控：<br>    list:{<br>      handler:function(){ // 深度监控要加到handler函数里面<br>    store.save(“miaov-new”,this.title)<br>},<br>  deep:true //这样就能深度监控，不仅监控对象还能监控对象里面的属性值<br>},</p>
+<p>}</p>
+<h3 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">www.baidu.com/zhidao.html#123    在这个例子中#123就是hash</span><br><span class="line"></span><br><span class="line">window.addEventListener(&quot;hashchange&quot;,function()&#123;//当hash发生改变时执行这个函数</span><br><span class="line">    var hash = window.location.hash;</span><br><span class="line">    console.log(hash)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>组件特点：高内聚:组件的功能必须是完善的，比如一个下拉菜单组件，那他下拉菜单所需要的功能都是要实现的<br>低耦合：组件间的联系是很少的，可以随时替换互不影响</p>
+<p>组件的基本组成：<br>样式结构、行为逻辑、数据</p>
+<h4 id="注册组件"><a href="#注册组件" class="headerlink" title="注册组件"></a>注册组件</h4><p>组件使用之前要先注册，注册方法：  </p>
+<ol>
+<li>全局注册<blockquote>
+<p>可以在任何模板中使用，使用之前要先注册</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>语法：</strong>Vue.component(组件名,选项对象)<br>组件名命名约定：<br>驼峰(camelCase)&ensp;、&ensp;烤串(kebab-case)<br>在html中使用的组件：<br>使用烤串(kebab-case) 命名法<br>例如,注册:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&apos;my-component&apos;,&#123;</span><br><span class="line">    template:`&lt;div&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">               &lt;li&gt;&lt;/li&gt; </span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;`</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>使用:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-conponent&gt;&lt;my-conponent&gt;</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>局部注册<br>在组件实例(new Vue({}))中通过选项对象注册，只在所组册的作用域中使用<br>{<br> components：{<br> 组件名：选项对象<br>}<br>}</li>
+</ol>
+<h4 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h4><p>父组件要给子组件传递数据，子组件需要将他内部发生的事情告知给父组件</p>
+<p>父组件 -&gt;子组件<br> 组件实例的作用域是孤立的，不能在子组件直接用父组件的数据。<br>可以在组件上使用自定义属性绑定数据，在组件中需要显式的用props声明自定义属性名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;h2&gt;自定义下拉组件&lt;/h2&gt;</span><br><span class="line">&lt;custom-select btn-value=&quot;查询&quot;&gt;&lt;/custom-select&gt; //组件上使用自定义属性</span><br><span class="line">&lt;h2&gt;自定义下拉组件&lt;/h2&gt;</span><br><span class="line">&lt;custom-select  btn-value=&quot;搜索&quot;  &gt;&lt;/custom-select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">Vue.component(&quot;custom-select&quot;,&#123;//全局注册</span><br><span class="line">    data：function()&#123; //这样写的目的是每个组件都能单独返回一个自己的对象，而不会因为selectShow的值一改变全部组件值都改变</span><br><span class="line">        return &#123;</span><br><span class="line">            selectShow:false</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">    props:[&quot;btnValue&quot;], //组件中显示用props声明</span><br><span class="line">    template:`&lt;div&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">               &lt;li&gt;新闻1&lt;/li&gt; </span><br><span class="line">               &lt;li&gt;新闻2&lt;/li&gt; </span><br><span class="line">               &lt;input type=&quot;text&quot; v-bind：value=&quot;btnValue&quot;&gt;//子模板中使用，需要v-bind动态绑定</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;`</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>子组件-&gt;父组件<br>需要用到自定义事件,父组件用$on监听自定义组件，$emit触发父组件所关心的自定义事件<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">父组件：</span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;h2&gt;自定义下拉组件&lt;/h2&gt;</span><br><span class="line">&lt;custom-select v-on:receive = &quot;changeValueHandle&quot; &gt;//3.自定义事件接受到子组件传递过来的item值</span><br><span class="line">&lt;/custom-select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">methods:&#123;</span><br><span class="line">    changeValueHandle(value)&#123;//4.在这里处理接受到的item值</span><br><span class="line">        alert(&apos;我被触发了&apos;+value)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">子组件：</span><br><span class="line">Vue.component(&quot;custom-select&quot;,&#123;</span><br><span class="line">    data：function()&#123; </span><br><span class="line">        return &#123;</span><br><span class="line">            selectShow:false</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">    prons:[&quot;btnValue&quot;], </span><br><span class="line">    template:`&lt;div&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">               &lt;li&gt;新闻1&lt;/li&gt; </span><br><span class="line">               &lt;li @click=&quot;selectValueHandle(item)&quot;&gt;新闻2&lt;/li&gt; //1.点击的时候触发selectValueHandle函数,把item值通过methods里的$emit方法传给父组件 </span><br><span class="line">               &lt;input type=&quot;text&quot; v-bind：value=&quot;btnValue&quot;&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;`,</span><br><span class="line">     methods:&#123;</span><br><span class="line">        selectValueHandle:function(item)&#123;</span><br><span class="line">        this.$emit(&quot;receive&quot;,item); //2.通过$emit将item参数传递给自定义事件</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">   </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="受限制的元素"><a href="#受限制的元素" class="headerlink" title="受限制的元素"></a>受限制的元素</h4><p>DOM模板解析<br>Vue是在浏览器解析和标准化HTML之后才能获取模板内容,所以有些元素限制了能被他包裹的元素<br>例如：ul中只能放入li;select中只能放入option<br>某些元素中放入了自定义元素，不符合W3C标准,最终会解析错误<br>变通的方式是使用特殊属性is来扩展HTML标签功能<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;h2&gt;自定义下拉组件&lt;/h2&gt;</span><br><span class="line">&lt;table is=&quot;custom-select&quot;&gt;&lt;/table&gt;  //用is+组件名写就可以，</span><br><span class="line">//table里面只能放td,tr,放&lt;custom-select &gt;&lt;/custom-select&gt;浏览器会解析错误，所以要用到is</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;自定义下拉组件&lt;/h2&gt;</span><br><span class="line">&lt;custom-select  btn-value=&quot;搜索&quot;  &gt;&lt;/custom-select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">Vue.component(&quot;custom-select&quot;,&#123;//全局注册</span><br><span class="line">    data：function()&#123; //这样写的目的是每个组件都能单独返回一个自己的对象，而不会因为selectShow的值一改变全部组件值都改变</span><br><span class="line">        return &#123;</span><br><span class="line">            selectShow:false</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">    prons:[&quot;btnValue&quot;], //组件中显示用props声明</span><br><span class="line">    template:`&lt;div&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">               &lt;li&gt;新闻1&lt;/li&gt; </span><br><span class="line">               &lt;li&gt;新闻2&lt;/li&gt; </span><br><span class="line">               &lt;input type=&quot;text&quot; v-bind：value=&quot;btnValue&quot;&gt;//子模板中使用，需要v-bind动态绑定</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;`</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="单向数据流"><a href="#单向数据流" class="headerlink" title="单向数据流"></a>单向数据流</h3><p>数据从父组件传递到子组件,只能单向绑定。<br>在子组件内部不应该修改父组件传递过来的值<br>改变prop的情况：  </p>
+<ol>
+<li>作为data中的局部数据的初始值使用  </li>
+<li>作为子组件中的computed树属性  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;h2&gt;自定义下拉组件&lt;/h2&gt;</span><br><span class="line">&lt;custom-select v-bind:count =&quot;count&quot;&gt;&lt;/custom-select&gt; </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">Vue.component(&quot;custom-select&quot;,&#123;</span><br><span class="line">    data：function()&#123; </span><br><span class="line">        return &#123;</span><br><span class="line">            innercount:this.count //方法一：作为data中的局部数据的初始值使用 </span><br><span class="line">        &#125;      </span><br><span class="line">    &#125; ,</span><br><span class="line">    conputed:&#123;</span><br><span class="line">        innercount2()&#123;</span><br><span class="line">            return this.innercount  //方法二：作为子组件中的computed树属性 </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    prons:[&quot;count&quot;], </span><br><span class="line">    template:`&lt;div&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">               &lt;li&gt;新闻1&lt;/li&gt; </span><br><span class="line">               &lt;li&gt;新闻2&lt;/li&gt; </span><br><span class="line">               &lt;input type=&quot;text&quot; &gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;`</span><br><span class="line">    &#125;),</span><br><span class="line">    methods:&#123;</span><br><span class="line">        changeCount()&#123;</span><br><span class="line">            this.innercount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="props验证"><a href="#props验证" class="headerlink" title="props验证"></a>props验证</h3><p>组件可以为props指定验证要求,如果未按指定验证要求，vue会发出警告<br>props:{<br>    propA:Number,<br>    propB:[String,Number]//多种类型<br>    propC:{type:String,required:true}//必传,且为字符串<br>    propD:{type:Number,default:100} //字符串类型,默认值为100<br>    propE:{type:Number,default:function(){return 100}}<br>    propF:{validator:function(value){return value &gt;10}}//自定义验证规则<br>}<br>验证类型为原生构造器：String,Number,FunctionObject,Boolean,Array</p>
+<h3 id="使用slot分发内容"><a href="#使用slot分发内容" class="headerlink" title="使用slot分发内容"></a>使用slot分发内容</h3><p>使用一种方式混合父组件的内容与子组件自己的模板,这个过程称为’内容分发’。在子组件中使用特殊的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#### 单个solt  </span><br><span class="line">在子组件模板中有slot标签，被视为备用内容，在父组件不提供内容的情况下使用，如果父组件提供内容，则把整个内容片段插入到slot所在的DOM位置,并替换掉slot标签本身。</span><br><span class="line">子组件模板中没有slot标签,父组件中提供的内容会被抛弃</span><br></pre></td></tr></table></figure></p>
+<p><body><br>  <div id="app"></div></body></p>
+<p><custom></custom></p>
+<p><div>自定义结构</div> //插入的结构<br><br>  <br></p>
+<p><script><br>//定制模板 div<br>Vue.component(‘custom’,{<br>    template:<code>&lt;div&gt;
+    &lt;slot&gt; //插槽,当custom标签内写入内容的时候会把slot里的东西替换掉
+    &lt;p&gt;这是第一个提醒&lt;/p&gt;
+    &lt;p&gt;这是第二个提醒&lt;/p&gt;
+    &lt;p&gt;这是第三个提醒&lt;/p&gt;
+    &lt;/slot&gt;
+    &lt;/div&gt;</code><br>    })</p>
+<p>new Vue({<br>    el:”#app”<br>    })<br></script><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 具名solt</span><br></pre></td></tr></table></figure></p>
+<p><slot>元素可以用一个特殊的属性name来配置如何分发内容。可以使用一个匿名solt,处理那些没有对应slot的内容  </slot></p>
+<p><body><br>  <div id="app"></div></body></p>
+<p><custom></custom></p>
+<p><div slot="one">替换第一个提醒</div> //写上对应的名字</p>
+<p><div slot="three">替换第三个提醒</div></p>
+<template slot="two"><br>    <div>替换第二个提醒</div> //当有很多内容时可以这么写<br>    <span>替换第2个提醒</span><br>    <div>替换第二个提醒</div><br>    <span>替换第2个提醒</span><br>    <div>替换第二个提醒</div><br>    <span>替换第2个提醒</span><br></template>
+
+<pre><code>&lt;div&gt;替换无名的slot&lt;/div&gt;//替换没有名字的slot
+</code></pre><p><br>  <br></p>
+<p><script><br>//定制模板 div<br>Vue.component(‘custom’,{<br>    template:<code>&lt;div&gt;
+    &lt;slot name=&quot;one&quot;&gt;&lt;p&gt;这是第一个提醒&lt;/p&gt;  &lt;/slot&gt; //定义名字
+    &lt;slot name=&quot;two&quot;&gt;&lt;p&gt;这是第二个提醒&lt;/p&gt;&lt;/slot&gt; 
+    &lt;slot name=&quot;three&quot;&gt;&lt;p&gt;这是第三个提醒&lt;/p&gt;&lt;/slot&gt;
+    &lt;slot&gt;&lt;/slot&gt;//这个标签替换没有名字的slot
+    &lt;/div&gt;</code><br>    })</p>
+<p>new Vue({<br>    el:”#app”<br>    })<br></script><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 编译作用域  </span><br><span class="line">父组件模板作用域内容在父组件作用域内编译  </span><br><span class="line">子组件模板的内容在子组件作用域内编译</span><br></pre></td></tr></table></figure></p>
+<p><body><br>  <div id="app"> //父组件中的作用域</div></body></p>
+<p><custom><br> //渲染的数据是父组件中的数据<br></custom><br>  <br></p>
+<p><script><br>//定制模板 div<br>Vue.component(‘custom’,{<br>    data(){<br>        return{<br>            message:”我是子组件中的数据”<br>        }<br>    }<br>    template:<code>//子组件作用域
+    &lt;div&gt;
+    //渲染子组件中的数据
+    &lt;slot&gt;&lt;/slot&gt;//结果显示为：我是父组件中的数据(渲染的是父组件中的数据)
+    &lt;/div&gt;</code><br>    })</p>
+<p>new Vue({<br>    el:”#app”<br>    }),<br>data:{<br>    message:’父组件的数据’<br>}<br></script><br><code></code></p>
+<h3 id="封装组件"><a href="#封装组件" class="headerlink" title="封装组件"></a>封装组件</h3><p>Vue组件里的api来自三个部分<br>props参数<br>slot定制参数<br>event自定义事件  </p>
+<p>MIME:多用途互联网邮件扩展类型   格式：文件类型/文件后缀</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/25/js面向对象/" rel="next" title="js面向对象">
+                <i class="fa fa-chevron-left"></i> js面向对象
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/14/vue-cli以及vuex/" rel="prev" title="vue-cli以及vuex">
+                vue-cli以及vuex <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">webfamer</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue是什么"><span class="nav-number">1.</span> <span class="nav-text">Vue是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue的两个核心点："><span class="nav-number">1.1.</span> <span class="nav-text">Vue的两个核心点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟DOM"><span class="nav-number">1.2.</span> <span class="nav-text">虚拟DOM</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模板"><span class="nav-number">2.</span> <span class="nav-text">模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#html模板"><span class="nav-number">2.0.1.</span> <span class="nav-text">html模板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么插值"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">怎么插值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串模板"><span class="nav-number">2.0.2.</span> <span class="nav-text">字符串模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rander函数"><span class="nav-number">2.0.3.</span> <span class="nav-text">rander函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义指令"><span class="nav-number">2.0.4.</span> <span class="nav-text">自定义指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存取localStorage的值"><span class="nav-number">2.0.5.</span> <span class="nav-text">存取localStorage的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#watch监控数据变化"><span class="nav-number">2.0.6.</span> <span class="nav-text">watch监控数据变化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hash"><span class="nav-number">2.0.7.</span> <span class="nav-text">hash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件"><span class="nav-number">2.0.8.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注册组件"><span class="nav-number">2.0.8.1.</span> <span class="nav-text">注册组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件通信"><span class="nav-number">2.0.8.2.</span> <span class="nav-text">组件通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#受限制的元素"><span class="nav-number">2.0.8.3.</span> <span class="nav-text">受限制的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单向数据流"><span class="nav-number">2.0.9.</span> <span class="nav-text">单向数据流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#props验证"><span class="nav-number">2.0.10.</span> <span class="nav-text">props验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用slot分发内容"><span class="nav-number">2.0.11.</span> <span class="nav-text">使用slot分发内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装组件"><span class="nav-number">2.0.12.</span> <span class="nav-text">封装组件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">webfamer</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
